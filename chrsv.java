@@ -30,6 +30,7 @@ public class chrsv {
             // System.out.print("You: ");
             // String user = input.nextLine();
             // String filtered = user.toLowerCase();
+            input.close();
 
 
         } catch (IOException e) {
