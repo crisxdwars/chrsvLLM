@@ -8,27 +8,42 @@ public class chrsv {
 
     public static void main(String[] args) {
         try {
-            File memory = new File("src/temp/session.txt");
-            if (memory.createNewFile()) {
-            
+            File session = new File("src/temp/session.txt");
+            FileWriter sessionWriter = new FileWriter("src/temp/session.txt");
+            if (session.createNewFile()) {
+
             } 
+
+            if (session.canRead() && session.canWrite() && session.exists()) {  
+                try {
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                    sessionWriter.close();
+                } catch (Exception e) {
+
+                }
+
+
+                
+            } else {
+                System.err.println("Something Went Wrong, Its either the session can't be read, write or it doesnt exists.");
+            }
 
             String _name = "Chrsv";
             Scanner input = new Scanner(System.in);
             greet GREET = new greet();
             model MODEL = new model();
-            System.out.print("You: ");
-            String user = input.nextLine();
-            String filtered = user.toLowerCase();
+            // System.out.print("You: ");
+            // String user = input.nextLine();
+            // String filtered = user.toLowerCase();
 
-            if (memory.canRead() && memory.canWrite() && memory.exists()) {
-                System.out.println("");
-            } else {
-                System.err.println("Something Went Wrong, Its either the session can't be read, write or it doesnt exists.");
-            }
 
         } catch (IOException e) {
-            System.err.println("Memory Error");
+            System.err.println("An Error Occured");
         }
     }
 }
