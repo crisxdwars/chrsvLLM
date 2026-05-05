@@ -15,20 +15,10 @@ public class chrsv {
             } 
 
             if (session.canRead() && session.canWrite() && session.exists()) {  
-                try {
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
                     sessionWriter.write("\nThis is the session/memory of the ai.");
                     sessionWriter.close();
-                } catch (Exception e) {
 
-                }
-
-
-                
+                    // Chat Functions Should Be Here
             } else {
                 System.err.println("Something Went Wrong, Its either the session can't be read, write or it doesnt exists.");
             }
