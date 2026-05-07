@@ -10,12 +10,14 @@ public class chrsv {
         try {
             File session = new File("src/temp/session.txt");
             FileWriter sessionWriter = new FileWriter("src/temp/session.txt");
+            FileReader readGreet = new FileReader("def/greet.java");
             if (session.createNewFile()) {
 
-            } 
+            } if (session.canRead() && session.canWrite() && session.exists()) {  
+                
+                String reads = readGreet.readAllAsString();
 
-            if (session.canRead() && session.canWrite() && session.exists()) {  
-                    sessionWriter.write("\nThis is the session/memory of the ai.");
+                sessionWriter.write(reads);
                     sessionWriter.close();
 
                     // Chat Functions Should Be Here
