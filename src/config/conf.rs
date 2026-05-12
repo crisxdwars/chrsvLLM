@@ -7,16 +7,12 @@
     -- .pdf 
     -- .docx
 */ 
-
-
-struct ModelConfig {
-    model_name: String,
-    model_owner: String,
-    // Adding more configuration soon!
-}
-
 pub fn call_modelname() {
-    let model = ModelConfig {
+    struct ModelConfig {
+        model_name: String,
+        model_owner: String,
+        // Adding more configuration soon!
+    } let model: ModelConfig = ModelConfig {
         model_name: String::from("Chrsv"), // Change this to anything you wanted.
         model_owner: String::from("Christian Talurong"),  // Change this to your name, So the LLM can say that you're the owner of this model.
     };
