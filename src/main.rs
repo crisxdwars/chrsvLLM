@@ -4,15 +4,29 @@ pub mod config {
 } 
 
 fn main() {
-// let trigger: bool = true;
+    let mut _trigger: bool = true;
+    let mut _input = String::new();
+    // const _DEFAULT: &str = "$";
+    while _trigger {
+        // print!("{}", _DEFAULT);
+        io::stdin()
+        .read_line(&mut _input)
+        .expect("An error occured.");
 
-    config::conf::call_modelname();
+        if _input.contains("chrs") {
+            println!("
+            Do you need help?
+            \n\n\r
+            Commands: \n
+            => 'brun' Run basic chatbot for help.\n
+            => 'stop' Stop this program.  
+            ");
+        } 
+        if _input.contains("stop") {
+            println!("Program stopped.");
+            _trigger = false;  
+        }
+    }
 
-/*    let greeting = vec![
-    "Hello! I am {}",
-    "Example1",
-    "Example2",
-    ];
- */
-    println!("H!");
+    // config::conf::call_modelname();
 }
