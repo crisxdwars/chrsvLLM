@@ -21,5 +21,6 @@ pub fn call_modelname() {
         model_owner: String::from("Christian Talurong"),  // Change this to your name, So the LLM can say that you're the owner of this model.
     };
 
-    println!("Model Name: {}", model.model_name, model.model_owner);
+    println!("Model Name: {}", model.model_name);
+    println!("Model Creator: {}", model.model_owner);
 }
